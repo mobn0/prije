@@ -1,8 +1,7 @@
 import pygame
 import screeninfo as si
-print("lopöpökpiolüäöüäpüüpö")
-print("ho")
-x = 10
-x += 101
-go = x+x
+
+for x in si.get_monitors():
+    print(x)
+
 print("lopöpökpiolüäöüäpüüpö")
