@@ -1,12 +1,33 @@
 import pygame
-import screeninfo as si
-import tkinter
+import sys
 
+# Initialize Pygame
+pygame.init()
 
-root = tkinter.Tk()
-root.withdraw()
-WIDTH, HEIGHT = root.winfo_screenwidth(), root.winfo_screenheight()
-for x in si.get_monitors():
-    print(x)
+# Constants
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+PLAYER_SIZE = 50
 
-print("lopöpökpiolüäöüäpüüpö")
+# Colors
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+BLUE = (0, 0, 255)
+GREY = 
+
+# Set up display
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+pygame.display.set_caption('Simple Platformer')
+
+# Main game loop
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+
+    # Draw background
+    screen.fill(BLACK)
+
+    # Update display
+    pygame.display.update()
